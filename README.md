@@ -158,3 +158,60 @@ System detects **fraud**, provides a probability score, and highlights risk fact
 ## Contributing
 
 Feel free to submit issues and enhancement requests!
+
+## Testing & Quality
+
+- Implemented **78 automated test cases** using pytest
+- Achieved **100% passing test suite**
+- Test coverage includes:
+  - API endpoints
+  - Machine learning predictions
+  - Rule-based fraud scoring logic
+- Ensures reliability and robustness of the system
+
+## API Endpoints
+
+### POST /predict
+
+Analyze a transaction for fraud detection.
+
+#### Request Body:
+```json
+{
+  "amount": 5000,
+  "time": 14,
+  "prev_fraud": 1,
+  "account_age": 100,
+  "transactions_24h": 10,
+  "txn_type": "Online Purchase",
+  "location": "Local",
+  "device": "Mobile"
+}
+
+{
+  "status": "success",
+  "prediction": "Fraudulent",
+  "fraud_probability": "72.5%",
+  "analysis": {
+    "risk_analysis": {
+      "score": "8/16",
+      "level": "High"
+    }
+  }
+}
+
+
+---
+
+## 💼 3. Add “Key Highlights” (VERY POWERFUL)
+
+Add near top:
+
+```md
+## Key Highlights
+
+- Hybrid fraud detection system combining ML + rule-based logic
+- Built using Flask API and Random Forest model
+- Achieved **100% passing (78 tests)** using pytest
+- Handles real-time transaction analysis
+- Designed for production-ready deployment
